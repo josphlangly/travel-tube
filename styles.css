@@ -1,0 +1,394 @@
+body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  color: #333333;
+  font-family: 'Quicksand', Arial, Helvetica, sans-serif;
+}
+
+h1, h2, h3, p {
+  margin: 5px 0;
+  padding-left: 25px;
+}
+
+h1 {
+  font-family: 'Pacifico', Arial, Helvetica, sans-serif;
+}
+
+p {
+  color: #4D4D4D;
+}
+
+a {
+  text-decoration: none;
+  color: #333333;
+}
+
+a:hover {
+  color: #FFA500;
+}
+
+header {
+  padding: 20px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%; 
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Home Page Styles */
+
+.home-page header, .home-page footer {
+  background-color: #87CEEB;
+}
+
+.home-page .main-content, .home-page .sidebar {
+  background-color: #E1F0FF;
+}
+
+/* Leisure Travel Page Styles */
+
+.leisure-page header, .leisure-page footer {
+  background-color: #FFFBCC;
+}
+
+.leisure-page .main-content, .leisure-page .sidebar {
+  background-color: #FFFDE6;
+}
+
+/* Cultural Travel Page Styles */
+.cultural-page header, .cultural-page footer {
+  background-color: #FFCCCB; /* Pastel Red/Pink color */
+}
+
+.cultural-page .main-content {
+  background-color: #FFE4E1; /* Light pink background for content area */
+}
+
+/* Adventure Travel Page Styles */
+.adventure-page header, .adventure-page footer {
+  background-color: #CCFFCC; /* Pastel green */
+}
+
+.adventure-page .main-content {
+  background-color: #E0FFE0; /* Light green background for content area */
+}
+
+/* Upload Video Page Styles */
+.upload-page header, .upload-page footer {
+  background-color: #A9A9A9; /* Light grey for header and footer */
+}
+
+.upload-page .main-content {
+  background-color: #C0C0C0; /* Lighter grey background for content area */
+}
+
+.search-bar {
+  position: absolute;
+  left: 20%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 25%;
+}
+
+.search-input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #333333;
+  border-radius: 20px;
+  background-color: #F8F8F8;
+
+}
+
+.search-button {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.upload-btn {
+  background-color: #F8F8F8;
+  padding: 10px 15px;
+  margin-right: 50px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.upload-btn:hover {
+  background-color: #333333;
+  color: #F8F8F8
+}
+
+.main-content {
+  position: relative;
+  width: 100%;
+}
+
+.sidebar {
+  width: 200px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar ul li {
+  list-style: none;
+  line-height: 30px;
+}
+
+.content-area {
+  margin-left: 220px;
+  padding: 10px;
+}
+
+.banner {
+  color: white;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  height: 200px;
+  position: relative;
+}
+
+.home-page .banner {
+  color: #333333;
+  background-image: url(https://arantravels.com/wp-content/uploads/2022/08/banner.jpg);
+}
+
+.leisure-page .banner {
+  background-image: url(https://static.vecteezy.com/system/resources/previews/009/447/764/original/summer-background-of-beach-vacation-holiday-theme-with-sand-wave-layer-top-view-paper-cut-tropical-summer-design-palm-leaves-surfboard-sunglass-beach-ball-cloud-on-yellow-sky-background-vector.jpg);
+}
+
+.adventure-page .banner {
+  background-image: url(https://static.vecteezy.com/system/resources/thumbnails/022/032/951/small_2x/jungle-forest-silhouette-tropical-landscape-vector.jpg);
+}
+
+.cultural-page .banner {
+  background-image: url(https://static.vecteezy.com/system/resources/previews/007/162/419/non_2x/illustration-of-an-urban-scene-with-a-pink-background-a-metropolis-and-an-airplane-silhouette-vector.jpg);
+}
+
+.banner h1 {
+  font-size: 40px;
+}
+
+.profile-image {
+  padding: 40px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+/* Info Box */
+.info-box {
+  position: relative; /* Relative to its parent container */
+  padding: 5px 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 40%;
+}
+
+/* Info Box Overlapping the Banner */
+.banner .info-box {
+  background-color: rgba(255, 255, 255, 0.8);
+  position: absolute;
+  bottom: -25px; /* Adjust for overlap */
+  left: 15%;
+}
+
+/* Info Box Overlapping the Divider Line */
+.line-container .info-box {
+  background-color: rgba(255, 255, 255);
+  position: absolute;
+  top: -20px; /* Adjust to overlap the line */
+  left: 15%;
+  z-index: 2; /* Ensure it sits above the divider line */
+}
+
+.info-box p {
+  padding: 0;
+}
+
+.featured-video {
+  border-radius: 15px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.featured-video img {
+  width: 400px;
+  height: 250px;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+/* Video List */
+.video-list-container {
+  overflow-x: scroll; /* Enable horizontal scrolling */
+  white-space: nowrap; /* Prevent table items from wrapping */
+}
+
+.video-table {
+  overflow-x: scroll; /* Enable horizontal scrolling */
+  white-space: nowrap; /* Prevent table items from wrapping */
+  border-collapse: collapse;
+  margin: 20px 10px;
+}
+
+.video-table td {
+  padding: 5px;
+  vertical-align: top; /* Align content to the top */
+  display: inline-block;
+  white-space: normal;
+  text-align: center;
+  width: 250px; /* Set the fixed width for video cells */
+}
+
+.video-table img {
+  width: 250px;
+  height: 150px;
+  border-radius: 5px;
+  margin-bottom: 10px; /* Add margin to space between image and text */
+}
+
+.video-table h3 {
+  font-size: 16px;
+  min-height: 20px; /* Set a fixed height for titles to avoid shifting */
+}
+
+.video-table p {
+  font-size: 12px;
+  min-height: 30px; /* Set a minimum height for the descriptions */
+}
+
+/* Footer */
+footer {
+  padding: 10px;
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  width: 100%; /* Make sure it spans across the bottom */
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); /* Slight shadow to match header */
+  text-align: center;
+}
+
+footer p {
+  padding: 0;
+}
+
+footer .socials a {
+  color: #333333; /* White text for links */
+  margin: 5px 10px;
+  font-size: 14px;
+}
+
+footer .socials a:hover {
+  color: #FFA500; /* Orange hover effect for accessibility */
+}
+
+.line-container {
+  position: relative; /* Ensures the info box can be positioned relative to this container */
+  text-align: center;
+  margin: 20px 0; /* Adjusts the space between sections */
+}
+
+.divider-line {
+  border: none;
+  border-top: 2px solid black; /* The color and thickness of the line */
+  margin: 0 auto;
+  width: 100%; /* Adjust the width of the line */
+  position: relative;
+  z-index: 1;
+}
+
+.video-container {
+  border-radius: 5px;
+  max-width: 900px;
+  margin: 20px;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.video-title {
+  font-size: 24px;
+  margin: 10px;
+  color: #333;
+  font-family: 'Quicksand', cursive;
+}
+
+.video-description {
+  font-size: 14px;
+  color: #555;
+  background-color: #f1f1f1;
+  padding: 10px;
+  margin-top: 15px;
+  border-radius: 5px;
+}
+
+iframe {
+  width: 100%;
+  height: 500px; /* Adjusted for a larger video size */
+  border: none;
+}
+
+/* Form Container */
+.video-upload-form {
+  background-color: #F5F5F5; /* Light grey form background */
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 20px; /* Center the form */
+}
+
+.video-upload-form h3 {
+  margin-bottom: 10px;
+}
+
+select.form-input {
+  width: 100%;
+}
+
+.form-input {
+  width: calc(100% - 20px); /* Ensures the input doesn't touch the edges */
+  padding: 10px;
+  margin-bottom: 25px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+
+.form-input:focus {
+  border-color: #87CEEB; /* Blue border on focus */
+}
+
+.upload-page .upload-btn {
+  background-color: #333333;
+  color: #F8F8F8;
+}
+
+.upload-page .upload-btn:hover {
+  background-color: #F8F8F8;
+  color: #333333;
+  border: 1px solid #333333;
+}
